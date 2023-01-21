@@ -1,5 +1,4 @@
 function[X3, Y3, Z3] = projective_point_addition(X1,Y1,Z1, X2,Y2,Z2, B3)
-
     t0 = X1 * X2;
     t1 = Y1 * Y2;
     t2 = Z1 * Z2;
@@ -33,5 +32,6 @@ function[X3, Y3, Z3] = projective_point_addition(X1,Y1,Z1, X2,Y2,Z2, B3)
     t0 = t0 * t3;
     Z3 = Z3 * t4;
     Z3 = Z3 + t0;
+    
     
 end
