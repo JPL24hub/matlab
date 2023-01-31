@@ -11,3 +11,9 @@
 % addition results in this matlab program
 % (https://andrea.corbellini.name/ecc/interactive/modk-add.html).
 % This site can validate addition for big numbers: http://www.christelbach.com/eccalculator.aspx
+%----------------------------------------------------------------------
+             HOW TO EXECUTE
+%-----------------------------------------------------------------------
+  1. Download this repo with all files.
+  2. Open folder in MATLAB
+  3. Run root.m and modify it according to directions in comments
