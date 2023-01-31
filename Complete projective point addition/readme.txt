@@ -17,3 +17,5 @@
   1. Download this repo with all files.
   2. Open folder in MATLAB
   3. Run root.m and modify it according to directions in comments
+  
+  Note: for SECP256K1, the ouput shown in the comments (X3,Y3,Z3) is what is expected, but the equations do not achieve this.
