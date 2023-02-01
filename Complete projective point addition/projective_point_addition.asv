@@ -1,0 +1,36 @@
+function[X3, Y3, Z3] = projective_point_addition (X1,Y1,Z1, X2,Y2,Z2, b3, primeP)
+t0 = mod(vpi(X1)*vpi(X2), vpi(primeP));
+t1 = mod(vpi(Y1)*vpi(Y2), vpi(primeP));
+t2 = mod(vpi(Z1)*vpi(Z2), vpi(primeP));
+t3 = mod(vpi(X1)+vpi(Y1), vpi(primeP));
+t4 = mod(vpi(X2)+vpi(Y2), vpi(primeP));
+t3 = mod(vpi(t3)*vpi(t4), vpi(primeP));
+t4 = mod(vpi(t0)+vpi(t1), vpi(primeP)); 
+t3 = mod(vpi(t3)-vpi(t4), vpi(primeP)); 
+t4 = mod(vpi(Y1)+vpi(Z1), vpi(primeP));
+X3 = mod(vpi(Y2)+vpi(Z2), vpi(primeP)); 
+t4 = mod(vpi(t4)*vpi(X3), vpi(primeP)); 
+X3 = mod(vpi(t1)+vpi(t2), vpi(primeP));
+t4 = mod(vpi(t4)-vpi(X3), vpi(primeP)); 
+X3 = mod(vpi(X1)+vpi(Z1), vpi(primeP));
+Y3 = mod(vpi(X2)+vpi(Z2), vpi(primeP));
+X3 = mod(vpi(X3)*vpi(Y3), vpi(primeP))
+Y3 = mod(vpi(t0)+vpi(t2), vpi(primeP))
+Y3 = mod(vpi(X3)-vpi(Y3), vpi(primeP))
+X3 = mod(vpi(t0)+vpi(t0), vpi(primeP))
+t0 = mod(vpi(X3)+vpi(t0), vpi(primeP)) 
+t2 = mod(vpi(b3)*vpi(t2), vpi(primeP))
+Z3 = mod(vpi(t1)+vpi(t2), vpi(primeP)) 
+t1 = mod(vpi(t1)-vpi(t2), vpi(primeP)) 
+Y3 = mod(vpi(b3)*vpi(Y3), vpi(primeP))
+X3 = mod(vpi(t4)*vpi(Y3), vpi(primeP))
+t2 = mod(vpi(t3)*vpi(t1), vpi(primeP)) 
+X3 = mod(vpi(t2)-vpi(X3), vpi(primeP))
+Y3 = mod(vpi(Y3)*vpi(t0), vpi(primeP)) 
+t1 = mod(vpi(t1)*vpi(Z3), vpi(primeP))
+Y3 = mod(vpi(t1)+vpi(Y3), vpi(primeP))
+t0 = mod(vpi(t0)*vpi(t3), vpi(primeP)) 
+Z3 = mod(vpi(Z3)*vpi(t4), vpi(primeP)) 
+Z3 = mod(vpi(Z3)+vpi(t0), vpi(primeP))
+
+end
