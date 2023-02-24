@@ -1,6 +1,0 @@
-function[lcm] = lcm(m, n)
-a=m;
-b=n;
-
-
-end

@@ -42,7 +42,10 @@ function [R] = binary_inversion_algorithm(a, p)
     
     if u == 1
         R = mod(vpi(x), vpi(p));
+        x
     elseif v == 1
         R = mod(vpi(y), vpi(p));
+        y
     end
+    
 end
