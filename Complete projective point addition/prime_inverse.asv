@@ -1,0 +1,17 @@
+clc
+%find prime
+stop=0;
+p = 30;
+while stop==0
+    p = vpi(p)+vpi(1);
+    if isprime(vpi(n))
+        stop=1;
+    end
+end
+a=vpi(p)-vpi(10);
+
+while has_inverse(a, p)~=1
+    a = vpi(a) + vpi(1);
+end
+a
+p
