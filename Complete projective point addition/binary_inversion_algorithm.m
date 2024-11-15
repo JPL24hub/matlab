@@ -1,4 +1,4 @@
-function [R] = binary_inversion_algorithm(a, p)
+function [R] = binary_inversion_algorithm(p, a)
 %https://www.allaboutcircuits.com/technical-articles/how-to-vhdl-description-of-a-simple-algorithm-the-data-path/
 %https://www.allaboutcircuits.com/technical-articles/how-to-vhdl-description-of-a-simple-algorithm-the-control-path/
     u = a;
@@ -39,13 +39,12 @@ function [R] = binary_inversion_algorithm(a, p)
             end
         end
     end
-    
     if u == 1
         R = mod(vpi(x), vpi(p));
-        R=x;
+%         R=x;
     elseif v == 1
         R = mod(vpi(y), vpi(p));
-        R=y;
+%         R=y;
     end
     
 end
